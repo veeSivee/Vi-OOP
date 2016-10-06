@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.tes.vi.sampleoop.stockbreeding.AnimalBehaviour;
 import com.tes.vi.sampleoop.stockbreeding.Chicken;
 import com.tes.vi.sampleoop.stockbreeding.Duck;
+import com.tes.vi.sampleoop.stockbreeding.DuckData;
 import com.tes.vi.sampleoop.stockbreeding.Lamb;
 
 import java.util.ArrayList;
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     Spinner mSpinner;
     Button btnSpeak;
     AnimalBehaviour mAnimal, mChicken,mDuck,mLamb;
+    DuckData mHisDuckData;
+
+    String data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +51,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpinner.setAdapter(adapter);
 
-        mChicken = new Chicken();
+        mChicken = new Chicken();  //AnimalBehaviour reference, Chicken object == oveririding
         mDuck = new Duck();
         mLamb = new Lamb();
+
+        HisDuck mHisDuck = new HisDuck("fishing");
+        mHisDuckData = mHisDuck.dataHisDuck();
 
     }
 
@@ -83,6 +90,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onClick(View view) {
-        tvNote.setText(mAnimal.speak());
+        data = mAnimal.speak();
+
+        if(mAnimal==mDuck){
+            String sound = mHisDuckData.getSound();
+            String color = "I'm " + mHisDuckData.getColor();
+            String hoby = "My hoby is " + mHisDuckData.getHoby();
+
+            data = sound + "\n" + color + "\n" + hoby;
+        }
+
+        tvNote.setText(data);
     }
 }

@@ -5,8 +5,27 @@ package com.tes.vi.sampleoop.stockbreeding;
  */
 
 public class Duck implements AnimalBehaviour {
+
+    public String hoby;
+    protected String hobyProtected;
+    private String hobyPrivate;
+
     @Override
     public String speak() {
-        return "wek wek wek";
+        return "wek wek wek";   //polymorphism
     }
+
+    public String color(){
+        return "white";
+    }
+
+    private String gender(){
+        return "male";
+    }
+
+    protected String favFood(){
+        return "keong";
+    }
+
+
 }
