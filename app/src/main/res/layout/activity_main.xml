@@ -15,30 +15,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Animal" />
+        android:text="Animal"
+        android:padding="@dimen/margin_small"/>
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:id="@+id/spinner"
+        android:padding="@dimen/margin_small"
         android:layout_below="@+id/tvHello"/>
 
     <Button
         android:id="@+id/btnSpeak"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Speak"
-        android:layout_below="@+id/spinner"/>
+        android:layout_below="@+id/spinner"
+        style="@style/BaseButton"/>
 
     <TextView
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvNote"
-        android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@+id/btnSpeak"
-        android:layout_alignBottom="@+id/btnSpeak" />
+        android:layout_marginTop="30dp"
+        android:padding="@dimen/margin_small"
+        android:layout_below="@+id/btnSpeak" />
 
 </RelativeLayout>
