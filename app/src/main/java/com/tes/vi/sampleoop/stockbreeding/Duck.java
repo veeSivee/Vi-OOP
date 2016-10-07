@@ -9,6 +9,7 @@ public class Duck implements AnimalBehaviour {
     public String hoby;
     protected String hobyProtected;
     private String hobyPrivate;
+    String defaultHoby;
 
     @Override
     public String speak() {

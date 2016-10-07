@@ -8,15 +8,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.tes.vi.sampleoop.stockbreeding.AnimalBehaviour;
 import com.tes.vi.sampleoop.stockbreeding.Chicken;
 import com.tes.vi.sampleoop.stockbreeding.Duck;
 import com.tes.vi.sampleoop.stockbreeding.DuckData;
 import com.tes.vi.sampleoop.stockbreeding.Lamb;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener ,View.OnClickListener{
 
